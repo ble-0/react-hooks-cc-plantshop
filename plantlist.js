@@ -5,6 +5,7 @@ import Search from "./Search";
 function PlantList() {
   const [searchQuery, setSearchQuery] = useState("");
   const [plants, setPlants] = useState([]);
+  
   // GET request
   useEffect(() => {
     const fetchPlants = async () => {
@@ -18,6 +19,7 @@ function PlantList() {
     };
     fetchPlants();
   }, []);
+
   // POST request
   const handleAddPlant = async (newPlant) => {
     try {
